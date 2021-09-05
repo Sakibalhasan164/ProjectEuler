@@ -1,11 +1,9 @@
-let rows=[[1]];
+let rows=[];
 let initialProduct=1;
 // let rowNumber=7//the row number of the triangle
 
-
-
 let nrow=[]
-for (let rowNumber = 2; rowNumber <=6; rowNumber++) {
+for (let rowNumber = 2; rowNumber <=20; rowNumber++) {
     for (let k = 0; k <=rowNumber; k++) {
 let nFact=factorial(rowNumber,0)
 //setting the intialprduct back to default
@@ -28,8 +26,23 @@ rows.push(nrow)
 nrow=[]
 // console.log(nrow);
 }
-
 console.log(rows);
+
+let initalWidth=100;
+
+const triangle=document.querySelector('.triangle')
+rows.forEach(row => {
+   const div=document.createElement('div')
+   for (let rowEnrty = 0; rowEnrty < row.length; rowEnrty++) {
+    const para=document.createElement('p')
+    const node=document.createTextNode(row[rowEnrty])
+    para.appendChild(node)
+    div.appendChild(para)
+    div.classList='row2'
+    div.style.width=`${initalWidth+(rowEnrty*50)}px`;           
+   }
+   triangle.appendChild(div)
+});
 
 function factorial(n,m){
    if(n==m | n==0){

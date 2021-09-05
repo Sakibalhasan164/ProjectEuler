@@ -1,0 +1,27 @@
+*{
+    /* background-color: pink; */
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+}
+
+.triangle{
+    width: 100%;
+    height: 100vh;
+    background-color: lightcoral;
+}
+.row1{
+    background-color: pink;
+    width: 50px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+.row2{
+    background-color: pink;
+    /* width: 120px; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+}
